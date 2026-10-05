@@ -14,6 +14,7 @@ Every number below comes from a real run and is explained, with its limits, in t
 | --- | --- | --- |
 | [consultor-tributario](https://github.com/0103juan/consultor-tributario) | Spanish RAG over Colombia's tax code, answering with article citations | 29 of 33 questions correct, 100% grounded |
 | [enterprise-rag](https://github.com/0103juan/enterprise-rag) | RAG with query rewriting, hybrid retrieval, reranking and claim-level hallucination checks | 87.9% correct, 100% grounded; quality gates in CI |
+| [secop-analyst](https://github.com/0103juan/secop-analyst) | A LangGraph agent over public contracts: hybrid search on pgvector, model-written SQL contained by Postgres, human approval, two-tier memory on Redis and Postgres, OpenTelemetry, local Kubernetes | One real question so far: 38 figures checked against the database, all correct, for about $0.06 |
 | [model-gateway](https://github.com/0103juan/model-gateway) | The Python package the two RAG projects call models through: routing between a small and a large model, fallback, response cache, cost per call and a budget per key | Same evaluation at $0.66 on the large model and $0.27 on the small one, 28 and 27 of 33 correct; a repeated run cost $0.00 |
 | [sandboxed-agent](https://github.com/0103juan/sandboxed-agent) | Multi-agent coding system with human approval gates, inside a locked-down Docker sandbox, no agent framework | One full run written up, with its cost |
 | [legacy-db-mcp](https://github.com/0103juan/legacy-db-mcp) | MCP server that lets a model query a legacy database: read-only, column-masked and time-boxed by the database engine | Three real sessions with the model written up |
@@ -29,6 +30,7 @@ Every number below comes from a real run and is explained, with its limits, in t
 
 ## Backend
 
+- [terraform-aws-platform](https://github.com/0103juan/terraform-aws-platform): Terraform modules for a service on AWS (VPC, EKS, RDS, ElastiCache, pod identity, GitHub OIDC), tested against a mocked provider. Not applied to an account.
 - [crediya-microservice-loan](https://github.com/0103juan/crediya-microservice-loan): a reactive hexagonal microservice in Java 21 and Spring WebFlux. Approving a loan publishes to SQS and a Lambda emails the client, checked in CI on LocalStack.
 - [crediya-microservice-auth](https://github.com/0103juan/crediya-microservice-auth): users, roles and JWT login, mutation-tested.
 
