@@ -14,6 +14,7 @@ Every number below comes from a real run and is explained, with its limits, in t
 | --- | --- | --- |
 | [consultor-tributario](https://github.com/0103juan/consultor-tributario) | Spanish RAG over Colombia's tax code, answering with article citations | 29 of 33 questions correct, 100% grounded |
 | [enterprise-rag](https://github.com/0103juan/enterprise-rag) | RAG with query rewriting, hybrid retrieval, reranking and claim-level hallucination checks | 87.9% correct, 100% grounded; quality gates in CI |
+| [model-gateway](https://github.com/0103juan/model-gateway) | The Python package the two RAG projects call models through: routing between a small and a large model, fallback, response cache, cost per call and a budget per key | Same evaluation at $0.66 on the large model and $0.27 on the small one, 28 and 27 of 33 correct; a repeated run cost $0.00 |
 | [sandboxed-agent](https://github.com/0103juan/sandboxed-agent) | Multi-agent coding system with human approval gates, inside a locked-down Docker sandbox, no agent framework | One full run written up, with its cost |
 | [legacy-db-mcp](https://github.com/0103juan/legacy-db-mcp) | MCP server that lets a model query a legacy database: read-only, column-masked and time-boxed by the database engine | Three real sessions with the model written up |
 | [secop-mcp](https://github.com/0103juan/secop-mcp) | MCP server over Colombia's public procurement data | A real session showed two failures; both were fixed in the tool, not in the prompt |
