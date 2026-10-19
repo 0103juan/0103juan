@@ -19,6 +19,8 @@ Every number below comes from a real run and is explained, with its limits, in t
 | [sandboxed-agent](https://github.com/0103juan/sandboxed-agent) | Multi-agent coding system with human approval gates, inside a locked-down Docker sandbox, no agent framework | One full run written up, with its cost |
 | [legacy-db-mcp](https://github.com/0103juan/legacy-db-mcp) | MCP server that lets a model query a legacy database: read-only, column-masked and time-boxed by the database engine | Three real sessions with the model written up |
 | [secop-mcp](https://github.com/0103juan/secop-mcp) | MCP server over Colombia's public procurement data | A real session showed two failures; both were fixed in the tool, not in the prompt |
+| [verificador-citas](https://github.com/0103juan/verificador-citas) | Checks citations of Constitutional Court rulings against the official register, and measures how often a model invents them | Checked against all 29,474 rulings in the register; the model benchmark has not been run yet |
+| [cifras-verificables](https://github.com/0103juan/cifras-verificables) | An agent over Colombia's open data where every figure carries a receipt that reproduces it, checked without a model | Tools run against the live portal; not run with a model yet |
 
 ## A product on public data
 
@@ -30,7 +32,7 @@ Every number below comes from a real run and is explained, with its limits, in t
 
 ## Backend
 
-- [terraform-aws-platform](https://github.com/0103juan/terraform-aws-platform): Terraform modules for a service on AWS (VPC, EKS, RDS, ElastiCache, pod identity, GitHub OIDC), tested against a mocked provider. Not applied to an account.
+- [terraform-cloud-platform](https://github.com/0103juan/terraform-cloud-platform): the same platform on Google Cloud and AWS in Terraform (GKE and EKS, Cloud SQL and RDS, Memorystore and ElastiCache, Cloud Run, workload identity, keyless CI), tested against mocked providers. Not applied to an account.
 - [crediya-microservice-loan](https://github.com/0103juan/crediya-microservice-loan): a reactive hexagonal microservice in Java 21 and Spring WebFlux. Approving a loan publishes to SQS and a Lambda emails the client, checked in CI on LocalStack.
 - [crediya-microservice-auth](https://github.com/0103juan/crediya-microservice-auth): users, roles and JWT login, mutation-tested.
 
